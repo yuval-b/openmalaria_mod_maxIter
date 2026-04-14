@@ -347,7 +347,7 @@ SimTime VectorModel::initIterate()
         return sim::zero();
     }
 
-    if (++initIterations > 30) { throw TRACED_EXCEPTION("Transmission warmup exceeded 30 iterations!", util::Error::VectorWarmup); }
+    if (++initIterations > 100) { throw TRACED_EXCEPTION("Transmission warmup exceeded 100 iterations!", util::Error::VectorWarmup); }
 
     bool needIterate = false;
     for (size_t i = 0; i < speciesIndex.size(); ++i)
